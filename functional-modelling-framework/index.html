@@ -227,7 +227,7 @@
         <div class="header">
             <h1>OBINexus Mathematical Validation Suite</h1>
             <p>Aegis Project - Mathematical Foundation Verification</p>
-            <p>Sinphas  Dimensional Game Theory  Zero-Overhead Marshalling</p>
+            <p>Sinphasรฉ โ€ข Dimensional Game Theory โ€ข Zero-Overhead Marshalling</p>
         </div>
         
         <div class="tabs">
@@ -250,9 +250,9 @@
                 <div class="input-group">
                     <label>Dynamic Function (Piecewise):</label>
                     <textarea id="dynamic-function" rows="4" placeholder="Enter piecewise function conditions">x < -3: x + 2
--3 = x < 0: xý - 1
-0 = x < 4: 2x + 5
-x = 4: xü - 3x</textarea>
+-3 โค x < 0: xยฒ - 1
+0 โค x < 4: 2x + 5
+x โฅ 4: xยณ - 3x</textarea>
                 </div>
                 
                 <div class="input-group">
@@ -276,9 +276,9 @@ x = 4: xü - 3x</textarea>
                 <div class="input-group">
                     <label>Matrix Size:</label>
                     <select id="matrix-size" onchange="generateMatrix()">
-                        <option value="3">33</option>
-                        <option value="4">44</option>
-                        <option value="5">55</option>
+                        <option value="3">3ร—3</option>
+                        <option value="4">4ร—4</option>
+                        <option value="5">5ร—5</option>
                     </select>
                 </div>
                 
@@ -306,20 +306,20 @@ x = 4: xü - 3x</textarea>
                     <tbody id="complexity-tbody">
                         <tr>
                             <td>Matrix Generation</td>
-                            <td>O(ný)</td>
-                            <td>O(ný)</td>
+                            <td>O(nยฒ)</td>
+                            <td>O(nยฒ)</td>
                             <td><span class="performance-indicator perf-excellent"></span>Excellent</td>
                         </tr>
                         <tr>
                             <td>Parity Check</td>
-                            <td>O(ný)</td>
+                            <td>O(nยฒ)</td>
                             <td>O(1)</td>
                             <td><span class="performance-indicator perf-excellent"></span>Excellent</td>
                         </tr>
                         <tr>
                             <td>Dynamic Transform</td>
-                            <td>O(ný)</td>
-                            <td>O(ný)</td>
+                            <td>O(nยฒ)</td>
+                            <td>O(nยฒ)</td>
                             <td><span class="performance-indicator perf-good"></span>Good</td>
                         </tr>
                     </tbody>
@@ -333,12 +333,12 @@ x = 4: xü - 3x</textarea>
                 <h2 class="system-title">DCS Tabulation Engine</h2>
                 
                 <div class="input-group">
-                    <label>System Metrics (ๆ? values):</label>
+                    <label>System Metrics (ฮผแตข values):</label>
                     <input type="text" id="metrics" placeholder="dependency_depth,function_calls,external_deps,complexity" value="0.3,0.2,0.1,0.25">
                 </div>
                 
                 <div class="input-group">
-                    <label>Impact Weights (?? values):</label>
+                    <label>Impact Weights (ฯแตข values):</label>
                     <input type="text" id="weights" placeholder="weights for each metric" value="0.4,0.3,0.2,0.1">
                 </div>
                 
@@ -348,7 +348,7 @@ x = 4: xü - 3x</textarea>
                 </div>
                 
                 <div class="input-group">
-                    <label>Temporal Pressure (d?):</label>
+                    <label>Temporal Pressure (ฮดโ):</label>
                     <input type="number" id="temporal-pressure" placeholder="Temporal pressure factor" value="0.05" step="0.01" min="0" max="1">
                 </div>
                 
@@ -403,7 +403,7 @@ x = 4: xü - 3x</textarea>
             const dynamicResult = evaluateDynamicFunction(x);
             
             const results = `Function Analysis Results:
-อออออออออออออออออออออออออออออออออออ
+โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•
 
 Static Function: f(x,y) = ${a}x + ${b}y
 Test Input: (${x}, ${y})
@@ -415,15 +415,15 @@ ${window.lastDomainEvaluation ? `Domain Applied: ${window.lastDomainEvaluation.d
 Dynamic Result: ${dynamicResult}
 
 Equivalence Check:
-${Math.abs(staticResult - dynamicResult) < 0.001 ? 'V EQUIVALENT' : '? NOT EQUIVALENT'}
+${Math.abs(staticResult - dynamicResult) < 0.001 ? 'โ“ EQUIVALENT' : 'โ— NOT EQUIVALENT'}
 Difference: ${Math.abs(staticResult - dynamicResult)}
 
 Pattern Enforcement Analysis:
-This transformation conforms to the enforced Sinphas pattern via 
+This transformation conforms to the enforced Sinphasรฉ pattern via 
 symbolic derivation tree resolution and bounded cost evaluation.
 
 Function Tree Lineage:
-Root Function (Static)  Branch แ (Piecewise Logic)  ${window.lastDomainEvaluation ? window.lastDomainEvaluation.domain : 'Undefined'}
+Root Function (Static) โ’ Branch ฮฒ (Piecewise Logic) โ’ ${window.lastDomainEvaluation ? window.lastDomainEvaluation.domain : 'Undefined'}
 
 Classification:
 Static Function: Deterministic, Fixed Arity, No Branching
@@ -436,16 +436,16 @@ Dynamic Function: Context-Sensitive, Branching Logic, Adaptive`;
             let domain, result;
             
             if (x < -3) {
-                domain = "Domain๛: x < -3";
+                domain = "Domainโ: x < -3";
                 result = x + 2;
             } else if (x >= -3 && x < 0) {
-                domain = "Domainý: -3 = x < 0";
+                domain = "Domainโ: -3 โค x < 0";
                 result = x * x - 1;
             } else if (x >= 0 && x < 4) {
-                domain = "Domainü: 0 = x < 4";
+                domain = "Domainโ: 0 โค x < 4";
                 result = 2 * x + 5;
             } else if (x >= 4) {
-                domain = "Domain4: x = 4";
+                domain = "Domainโ: x โฅ 4";
                 result = x * x * x - 3 * x;
             } else {
                 domain = "Undefined domain";
@@ -471,16 +471,16 @@ Dynamic Function: Context-Sensitive, Branching Logic, Adaptive`;
             const total = results.length;
             
             const output = `2D Vector Solution Analysis:
-อออออออออออออออออออออออออออออออออออ
+โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•
 
-Test Range: x ? [-5, 5], y = 1
+Test Range: x โ [-5, 5], y = 1
 Sample Points: ${total}
 Equivalent Points: ${equivalent}
 Equivalence Ratio: ${(equivalent/total*100).toFixed(1)}%
 
 ${equivalent/total > 0.5 ? 
-  'V 2D VECTOR SOLUTION EXISTS\nFunctions show significant equivalence across domain' :
-  '? NO 2D VECTOR SOLUTION\nFunctions are fundamentally different'}
+  'โ“ 2D VECTOR SOLUTION EXISTS\nFunctions show significant equivalence across domain' :
+  'โ— NO 2D VECTOR SOLUTION\nFunctions are fundamentally different'}
 
 Transformation Model: ${equivalent/total > 0.8 ? 'Linear' : equivalent/total > 0.3 ? 'Piecewise' : 'Non-transformable'}`;
             
@@ -518,7 +518,7 @@ Transformation Model: ${equivalent/total > 0.8 ? 'Linear' : equivalent/total > 0
             const transformed = currentMatrix.map(x => x % 2 === 0 ? x / 2 : 3 * x + 1);
             
             const results = `Matrix Parity Transform Results:
-อออออออออออออออออออออออออออออออออออ
+โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•
 
 Original Matrix: [${currentMatrix.join(', ')}]
 Transformed:     [${transformed.join(', ')}]
@@ -531,7 +531,7 @@ Transform Function:
 f(x) = { x/2     if x mod 2 = 0
        { 3x + 1  otherwise
 
-State-Driven Logic: V APPLIED
+State-Driven Logic: โ“ APPLIED
 Dimension Filter: ${transformed.length > currentMatrix.length / 2 ? 'High Density' : 'Low Density'}`;
             
             currentMatrix = transformed;
@@ -544,19 +544,19 @@ Dimension Filter: ${transformed.length > currentMatrix.length / 2 ? 'High Densit
             const operations = size * size;
             
             const analysis = `Complexity Analysis:
-อออออออออออออออออออออออออออออออออออ
+โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•
 
-Matrix Size: ${size}${size}
+Matrix Size: ${size}ร—${size}
 Total Operations: ${operations}
 Memory Usage: ${operations * 4} bytes
 
-Time Complexity: O(ný) = O(${size}ý) = ${operations} operations
-Space Complexity: O(ný) = ${operations} memory units
+Time Complexity: O(nยฒ) = O(${size}ยฒ) = ${operations} operations
+Space Complexity: O(nยฒ) = ${operations} memory units
 
 Performance Classification:
-${operations <= 25 ? '? EXCELLENT - Fast execution' :
-  operations <= 100 ? 'V GOOD - Acceptable performance' :
-  '? MODERATE - Consider optimization'}
+${operations <= 25 ? 'โก EXCELLENT - Fast execution' :
+  operations <= 100 ? 'โ“ GOOD - Acceptable performance' :
+  'โ  MODERATE - Consider optimization'}
 
 Optimization Recommendations:
 - Cache parity results for repeated calculations
@@ -573,7 +573,7 @@ Optimization Recommendations:
             const circularDeps = parseInt(document.getElementById('circular-deps').value) || 0;
             const temporalPressure = parseFloat(document.getElementById('temporal-pressure').value) || 0;
             
-            // Calculate cost function: C = S(ๆ?๚??) + ?c + dt
+            // Calculate cost function: C = ฮฃ(ฮผแตขยทฯแตข) + ฮปc + ฮดt
             let weightedSum = 0;
             for (let i = 0; i < Math.min(metrics.length, weights.length); i++) {
                 weightedSum += metrics[i] * weights[i];
@@ -592,21 +592,21 @@ Optimization Recommendations:
             displayCostIndicator(totalCost);
             
             const results = `Cost Function Analysis:
-อออออออออออออออออออออออออออออออออออ
+โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•
 
-Dynamic Cost Function: ?? = S(ๆ?๚??) + ?c + dt
+Dynamic Cost Function: ๐’ = ฮฃ(ฮผแตขยทฯแตข) + ฮปc + ฮดt
 
 Components:
 Weighted Metrics: ${weightedSum.toFixed(4)}
-Circular Penalty: ${circularPenalty.toFixed(4)} (${circularDeps} cycles  0.2)
+Circular Penalty: ${circularPenalty.toFixed(4)} (${circularDeps} cycles ร— 0.2)
 Temporal Pressure: ${temporalPressure.toFixed(4)}
 
 TOTAL COST: ${totalCost.toFixed(4)}
 
 Governance Assessment:
-${totalCost <= 0.5 ? 'V AUTONOMOUS ZONE - Normal operation' :
-  totalCost <= 0.6 ? '? WARNING ZONE - Enhanced monitoring required' :
-  '?? GOVERNANCE ZONE - Mandatory intervention required'}
+${totalCost <= 0.5 ? 'โ“ AUTONOMOUS ZONE - Normal operation' :
+  totalCost <= 0.6 ? 'โ  WARNING ZONE - Enhanced monitoring required' :
+  '๐ซ GOVERNANCE ZONE - Mandatory intervention required'}
 
 Architectural Status:
 ${totalCost > 0.6 ? 'ISOLATION PROTOCOL TRIGGERED' : 'STABLE ARCHITECTURE'}`;
@@ -638,14 +638,14 @@ ${totalCost > 0.6 ? 'ISOLATION PROTOCOL TRIGGERED' : 'STABLE ARCHITECTURE'}`;
             let evolution = [];
             
             for (let i = 0; i < steps; i++) {
-                const drift = Math.random() * 0.1 - 0.05; // Random drift ๑0.05
+                const drift = Math.random() * 0.1 - 0.05; // Random drift ยฑ0.05
                 const pressure = 0.01 * i; // Increasing pressure
                 const baseCost = 0.4 + drift + pressure;
                 evolution.push(baseCost);
             }
             
             const results = `System Evolution Simulation:
-อออออออออออออออออออออออออออออออออออ
+โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•
 
 Evolution Steps: ${steps}
 Cost Progression: [${evolution.map(c => c.toFixed(3)).join(', ')}]
@@ -656,11 +656,11 @@ Max Cost: ${Math.max(...evolution).toFixed(3)}
 Min Cost: ${Math.min(...evolution).toFixed(3)}
 
 Stability Assessment:
-${Math.max(...evolution) > 0.6 ? '? INSTABILITY DETECTED - System exceeds governance threshold' :
-  'V STABLE EVOLUTION - System remains within operational bounds'}
+${Math.max(...evolution) > 0.6 ? 'โ  INSTABILITY DETECTED - System exceeds governance threshold' :
+  'โ“ STABLE EVOLUTION - System remains within operational bounds'}
 
 Recommendation:
-${Math.max(...evolution) > 0.6 ? 'Apply Sinphas isolation protocol' : 'Continue normal operation'}`;
+${Math.max(...evolution) > 0.6 ? 'Apply Sinphasรฉ isolation protocol' : 'Continue normal operation'}`;
             
             document.getElementById('dcs-results').textContent = results;
         }
@@ -676,7 +676,7 @@ ${Math.max(...evolution) > 0.6 ? 'Apply Sinphas isolation protocol' : 'Continue
             const warnings = recent.filter(entry => entry.cost > 0.5 && entry.cost <= 0.6).length;
             
             const governance = `Governance Validation Report:
-อออออออออออออออออออออออออออออออออออ
+โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•
 
 Recent History: ${recent.length} entries
 Violations (>0.6): ${violations}
@@ -684,9 +684,9 @@ Warnings (0.5-0.6): ${warnings}
 Safe Operations: ${recent.length - violations - warnings}
 
 Compliance Status:
-${violations === 0 ? 'V FULLY COMPLIANT' : 
-  violations <= 2 ? '? MARGINAL COMPLIANCE' : 
-  '?? NON-COMPLIANT'}
+${violations === 0 ? 'โ“ FULLY COMPLIANT' : 
+  violations <= 2 ? 'โ  MARGINAL COMPLIANCE' : 
+  '๐ซ NON-COMPLIANT'}
 
 Required Actions:
 ${violations > 0 ? '- Immediate architectural review required\n- Apply isolation protocol\n- Audit dependency structure' :
@@ -712,13 +712,13 @@ NASA-STD-8739.8 Alignment: ${violations === 0 ? 'SATISFIED' : 'REQUIRES REVIEW'}
             const memoTime = performance.now() - startMemo;
             
             const results = `Memoization Performance Test:
-อออออออออออออออออออออออออออออออออออ
+โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•
 
 Input: F(${n})
 Result: ${memoResult}
 
 Performance Comparison:
-Naive Fibonacci: ${naiveTime.toFixed(2)}ms (limited to n=35)
+Naive Fibonacci: ${naiveTime.toFixed(2)}ms (limited to nโค35)
 Memoized Fibonacci: ${memoTime.toFixed(2)}ms
 
 Speedup Factor: ${(naiveTime / memoTime).toFixed(0)}x
@@ -734,18 +734,18 @@ Memoized: O(n) - Linear
 Space Complexity: O(n)
 
 Lambda Calculus Implementation:
-?n.if n = 1 then n else MEMO(F(n-1) + F(n-2))
+ฮปn.if n โค 1 then n else MEMO(F(n-1) + F(n-2))
 
 Pattern Enforcement Analysis:
-This transformation conforms to the enforced Sinphas pattern via 
+This transformation conforms to the enforced Sinphasรฉ pattern via 
 tabulation and memoization with bounded cost evaluation.
 
 Architectural Validation:
-${memoTime < 1 ? 'V OPTIMAL - Suitable for production deployment' : 
-  memoTime < 10 ? '? ACCEPTABLE - Monitor for optimization opportunities' : 
-  '? SUBOPTIMAL - Requires architectural review'}
+${memoTime < 1 ? 'โ“ OPTIMAL - Suitable for production deployment' : 
+  memoTime < 10 ? 'โ  ACCEPTABLE - Monitor for optimization opportunities' : 
+  'โ SUBOPTIMAL - Requires architectural review'}
 
-Recommendation: ${memoTime < 1 ? 'V Optimal for production' : '? Consider further optimization'}`;
+Recommendation: ${memoTime < 1 ? 'โ“ Optimal for production' : 'โ  Consider further optimization'}`;
             
             document.getElementById('dcs-results').textContent = results;
         }
